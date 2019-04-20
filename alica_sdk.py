@@ -35,7 +35,7 @@ class AliceResponce:
         self._responce_dict = {
             "version": alica_request.version,
             "session": alica_request.session,
-            "responce": {
+            "response": {
                 "end_session": False
             }
         }
@@ -47,13 +47,13 @@ class AliceResponce:
         )
 
     def set_text(self, text):
-        self._responce_dict['responce']['text'] = text[:1024]
+        self._responce_dict['response']['text'] = text[:1024]
 
     def set_tts(self, text):
-        self._responce_dict["responce"]["tts"] = text[:1024]
+        self._responce_dict["response"]["tts"] = text[:1024]
 
     def set_buttons(self, buttons):
-        self._responce_dict["responce"]["buttons"] = buttons
+        self._responce_dict["response"]["buttons"] = buttons
 
     def __str__(self):
         return self.dumps()

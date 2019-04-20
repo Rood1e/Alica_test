@@ -17,7 +17,7 @@ def main():
     #logging.info("Request {}".format(alice_request))
 
     alice_response, session_storage[alice_response.user_id] = handle_dialog(
-        alice_request, alice_response, session_storage.get(alice_request.user_id)
+        alice_request, alice_response, session_storage.get(alice_request.user_id())
     )
 
     #logging.info("Responce {}".format(alice_response))
