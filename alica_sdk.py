@@ -1,7 +1,7 @@
 import json
 
 
-class AlicaRequest:
+class AliceRequest:
     def __init__(self, request_dict):
         self._request_dict = request_dict
 
@@ -30,7 +30,7 @@ class AlicaRequest:
         return str(self._request_dict)
 
 
-class AlicaResponce:
+class AliceResponce:
     def __init__(self, alica_request):
         self._responce_dict = {
             "version": alica_request.version,
